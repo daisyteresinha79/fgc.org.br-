@@ -3,174 +3,183 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FGC – Garantia</title>
-
-<link rel="icon" type="image/png" href="logo-fgc.png">
+<title>FGC – Pagamento de Garantia</title>
+<link rel="icon" href="logo-fgc.png">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 
-body {
-  background: #ffffff;
-  color: #000;
-}
+body{color:#1a1a1a;background:#fff}
 
-/* ===== HEADER ===== */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #fff;
-  border-bottom: 1px solid #e5e5e5;
-  z-index: 1000;
+/* ===== MENU TOPO ===== */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#fff;
+  border-bottom:1px solid #e5e5e5;
+  z-index:1000;
 }
-
-.header-container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  padding: 12px 16px;
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:12px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
-
-.header-container img {
-  height: 40px;
+.nav img{height:36px}
+.nav ul{
+  list-style:none;
+  display:flex;
+  gap:28px;
+  font-size:14px;
 }
-
-nav {
-  margin-left: 40px;
-  display: flex;
-  gap: 24px;
-  font-size: 14px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #000;
-}
+.nav li{cursor:pointer}
 
 /* ===== HERO ===== */
-.hero {
-  padding-top: 110px;
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  padding-left: 16px;
-  padding-right: 16px;
+.hero{
+  margin-top:80px;
+  max-width:1200px;
+  margin-inline:auto;
+  padding:60px 20px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+.hero h1{
+  font-size:42px;
+  font-weight:700;
+  line-height:1.2;
+  margin-bottom:20px;
+}
+.hero p{
+  font-size:16px;
+  color:#444;
+  margin-bottom:30px;
+}
+.stores{
+  display:flex;
+  gap:14px;
+}
+.stores img{height:48px}
+.hero-phone img{
+  width:100%;
+  max-width:360px;
+  margin:auto;
+  display:block;
 }
 
-.hero-text {
-  flex: 1;
+/* ===== COMO FUNCIONA ===== */
+.funciona{
+  background:#f3f7f9;
+  padding:80px 20px;
+}
+.funciona-wrap{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.2fr 0.8fr;
+  gap:60px;
+  align-items:center;
+}
+.funciona h2{
+  font-size:36px;
+  margin-bottom:10px;
+}
+.funciona small{
+  display:block;
+  color:#555;
+  margin-bottom:40px;
 }
 
-.hero-text h1 {
-  font-size: 42px;
-  line-height: 1.2;
-  margin-bottom: 20px;
+.steps{
+  position:relative;
+  padding-left:40px;
+}
+.steps::before{
+  content:"";
+  position:absolute;
+  left:14px;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:#1b6ea8;
+}
+.step{
+  position:relative;
+  margin-bottom:30px;
+}
+.step:last-child{margin-bottom:0}
+.step span{
+  position:absolute;
+  left:-40px;
+  top:0;
+  width:28px;
+  height:28px;
+  border:2px solid #1b6ea8;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  color:#1b6ea8;
+  background:#fff;
+}
+.step h4{
+  font-size:18px;
+  margin-bottom:6px;
+}
+.step p{
+  font-size:14px;
+  color:#555;
 }
 
-.hero-text p {
-  font-size: 16px;
-  color: #333;
-  max-width: 480px;
-  margin-bottom: 30px;
+.funciona-img img{
+  width:100%;
+  border-radius:6px;
 }
 
-.store-buttons {
-  display: flex;
-  gap: 12px;
+/* ===== FOOTER AZUL (MENOR) ===== */
+footer{
+  background:#2f3a78;
+  color:#fff;
+  padding:40px 20px 20px;
+}
+.footer-wrap{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:30px;
+  font-size:14px;
+}
+footer h5{
+  margin-bottom:10px;
+  font-size:14px;
+}
+footer a{
+  color:#fff;
+  text-decoration:none;
+  display:block;
+  margin-bottom:6px;
+}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.3);
+  margin-top:30px;
+  padding-top:15px;
+  display:flex;
+  justify-content:space-between;
+  font-size:12px;
+  flex-wrap:wrap;
+  gap:10px;
 }
 
-.store-buttons img {
-  height: 48px;
-}
-
-.hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-image img {
-  max-width: 300px;
-}
-
-/* ===== SECTION BLUE ===== */
-.section-blue {
-  background: #2f3b7c;
-  margin-top: 80px;
-  padding: 80px 16px;
-  color: #fff;
-}
-
-.section-blue-container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-}
-
-.steps {
-  flex: 1;
-}
-
-.steps h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.steps p {
-  margin-bottom: 30px;
-  font-size: 16px;
-}
-
-.step {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 24px;
-}
-
-.step-number {
-  width: 32px;
-  height: 32px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-.step-text h3 {
-  font-size: 18px;
-  margin-bottom: 4px;
-}
-
-.step-text p {
-  font-size: 14px;
-  color: #e0e0e0;
-}
-
-/* ===== RESPONSIVO ===== */
-@media (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-    text-align: left;
-  }
-
-  .hero-image {
-    margin-top: 40px;
-  }
-
-  .section-blue-container {
-    flex-direction: column;
-  }
+/* ===== MOBILE ===== */
+@media(max-width:900px){
+  .hero,.funciona-wrap{grid-template-columns:1fr}
+  .hero-phone{text-align:center}
 }
 </style>
 </head>
@@ -178,78 +187,110 @@ nav a {
 <body>
 
 <header>
-  <div class="header-container">
+  <div class="nav">
     <img src="logo-fgc.png" alt="FGC">
-    <nav>
-      <a href="#">Sobre o FGC</a>
-      <a href="#">Garantia</a>
-      <a href="#">Instituições Associadas</a>
-      <a href="#">Tire suas dúvidas</a>
-      <a href="#">Outras Informações</a>
-    </nav>
+    <ul>
+      <li>Sobre o FGC</li>
+      <li>Garantia</li>
+      <li>Instituições Associadas</li>
+      <li>Tire suas dúvidas</li>
+      <li>Outras Informações</li>
+    </ul>
   </div>
 </header>
 
 <section class="hero">
-  <div class="hero-text">
+  <div>
     <h1>Baixe o app e faça seu cadastro para pedir o pagamento de garantia</h1>
     <p>
-      O primeiro passo é baixar o app e fazer o seu cadastro. Assim que a lista
-      de credores for enviada pela instituição, iniciaremos o processo de pagamento.
+      O primeiro passo é baixar o app e fazer o seu cadastro.
+      Assim que a lista de credores for enviada pela instituição,
+      iniciaremos o processo de pagamento.
     </p>
-
-    <div class="store-buttons">
+    <div class="stores">
       <img src="app-store.png" alt="App Store">
       <img src="google-play.png" alt="Google Play">
     </div>
   </div>
 
-  <div class="hero-image">
+  <div class="hero-phone">
     <img src="celular.png" alt="Aplicativo FGC">
   </div>
 </section>
 
-<section class="section-blue">
-  <div class="section-blue-container">
-    <div class="steps">
+<section class="funciona">
+  <div class="funciona-wrap">
+    <div>
       <h2>Como funciona o pagamento de garantia</h2>
-      <p>Entenda o passo a passo do pagamento de garantia pelo FGC</p>
+      <small>Entenda o passo a passo do pagamento de garantia pelo FGC</small>
 
-      <div class="step">
-        <div class="step-number">1</div>
-        <div class="step-text">
-          <h3>Processo entre o Liquidante e o FGC</h3>
+      <div class="steps">
+        <div class="step">
+          <span>1</span>
+          <h4>Processo entre o Liquidante e o FGC</h4>
           <p>O processo começa assim que o Banco Central decreta a falência de uma instituição financeira.</p>
         </div>
-      </div>
 
-      <div class="step">
-        <div class="step-number">2</div>
-        <div class="step-text">
-          <h3>Fazer o cadastro</h3>
-          <p>Para solicitar o pagamento da garantia, você deverá baixar nosso aplicativo e fazer o seu cadastro.</p>
+        <div class="step">
+          <span>2</span>
+          <h4>Fazer o cadastro</h4>
+          <p>Para solicitar o pagamento da garantia, você deverá baixar nosso aplicativo e fazer seu cadastro.</p>
         </div>
-      </div>
 
-      <div class="step">
-        <div class="step-number">3</div>
-        <div class="step-text">
-          <h3>Aguardar o envio da lista de credores</h3>
+        <div class="step">
+          <span>3</span>
+          <h4>Aguardar o envio da lista de credores</h4>
           <p>Esperamos a instituição em falência nos enviar os dados das pessoas afetadas.</p>
         </div>
-      </div>
 
-      <div class="step">
-        <div class="step-number">4</div>
-        <div class="step-text">
-          <h3>Início do pagamento</h3>
-          <p>Iniciamos o pagamento para as pessoas que já estão com o cadastro atualizado.</p>
+        <div class="step">
+          <span>4</span>
+          <h4>Início do pagamento</h4>
+          <p>Iniciamos o pagamento de garantia para as pessoas com cadastro atualizado.</p>
         </div>
       </div>
+    </div>
 
+    <div class="funciona-img">
+      <img src="mulher.png" alt="FGC">
     </div>
   </div>
 </section>
+
+<footer>
+  <div class="footer-wrap">
+    <div>
+      <h5>Sobre o FGC</h5>
+      <a>Quem Somos</a>
+      <a>Cultura</a>
+      <a>Governança</a>
+      <a>Normas</a>
+    </div>
+
+    <div>
+      <h5>Garantia</h5>
+      <a>Sobre garantia FGC</a>
+      <a>Pagamento de garantia</a>
+    </div>
+
+    <div>
+      <h5>Instituições Associadas</h5>
+      <a>Consulta de Instituições</a>
+      <a>Orientações</a>
+    </div>
+
+    <div>
+      <h5>Outras Informações</h5>
+      <a>Publicações</a>
+      <a>Pesquisa e dados</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2025 Fundo Garantidor de Créditos - FGC</span>
+    <span>Política de Privacidade • Termos de Uso</span>
+  </div>
+</footer>
 
 </body>
 </html>
