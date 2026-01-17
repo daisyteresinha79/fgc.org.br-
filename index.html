@@ -181,6 +181,36 @@ footer a{
   .hero,.funciona-wrap{grid-template-columns:1fr}
   .hero-phone{text-align:center}
 }
+  @media (max-width: 768px) {
+
+  header {
+    position: fixed;
+  }
+
+  .nav {
+    padding: 10px 14px;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 18px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .nav li {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  /* remove scroll feio no iOS */
+  .nav ul::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 </style>
 </head>
 
@@ -299,5 +329,6 @@ footer a{
 
 </body>
 </html>
+
 
 
